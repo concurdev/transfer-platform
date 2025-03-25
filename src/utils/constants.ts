@@ -1,0 +1,15 @@
+export const RED_COLOR = "\x1b[31m";
+export const GREEN_COLOR = "\x1b[32m";
+export const YELLOW_COLOR = "\x1b[33m";
+export const BLUE_COLOR = "\x1b[34m";
+export const MAGENTA_COLOR = "\x1b[35m";
+export const CYAN_COLOR = "\x1b[36m";
+export const WHITE_COLOR = "\x1b[37m";
+export const BRIGHT_RED_COLOR = "\x1b[91m";
+export const BRIGHT_GREEN_COLOR = "\x1b[92m";
+export const BRIGHT_YELLOW_COLOR = "\x1b[93m";
+export const BRIGHT_BLUE_COLOR = "\x1b[94m";
+export const BRIGHT_MAGENTA_COLOR = "\x1b[95m";
+export const BRIGHT_CYAN_COLOR = "\x1b[96m";
+export const BRIGHT_WHITE_COLOR = "\x1b[97m";
+export const RESET_COLOR = "\x1b[0m";

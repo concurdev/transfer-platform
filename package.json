@@ -1,7 +1,12 @@
 {
   "name": "transfer-platform",
   "version": "1.0.0",
+  "description": "backend system designed to facilitate secure and efficient digital asset transfers",
   "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:concurdev/transfer-platform.git"
+  },
   "scripts": {
     "dev": "cross-env NODE_ENV=development nodemon src/app.ts",
     "build": "tsc",
