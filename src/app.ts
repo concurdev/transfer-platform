@@ -18,4 +18,4 @@ app.listen(PORT, () => {
   logger.info(colorMsg(`Server running on ${serverUrl}`, GREEN_COLOR));
 });
 
-export default app;
+export default app; // for testing purposes
