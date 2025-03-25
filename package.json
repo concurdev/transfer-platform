@@ -16,10 +16,11 @@
     "redis_login": "docker exec -it redis_cache redis-cli",
     "mysql_login": "docker exec -it mysql_db mysql -u root -p"
   },
-  "keywords": [],
+  "keywords": [
+    "transfer-platform"
+  ],
   "author": "Ashish Vashisht",
   "license": "MIT",
-  "description": "",
   "devDependencies": {
     "@types/amqplib": "^0.10.7",
     "@types/express": "^5.0.1",
