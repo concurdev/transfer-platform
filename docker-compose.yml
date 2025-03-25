@@ -1,0 +1,52 @@
+version: "3.8"
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: mysql_db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: as9891291333 # Use only root password
+      MYSQL_DATABASE: transfer_db
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - app_network
+
+  redis:
+    image: redis:alpine
+    container_name: redis_cache
+    restart: always
+    ports:
+      - "6379:6379"
+    networks:
+      - app_network
+
+  transfer-app:
+    build: .
+    container_name: transfer_app
+    restart: always
+    depends_on:
+      - mysql
+      - redis
+    environment:
+      NODE_ENV: development
+      REDIS_URL: redis://redis_cache:6379
+      DB_HOST: mysql_db
+      DB_PORT: 3306
+      DB_NAME: transfer_platform
+      DB_USER: root
+      DB_PASSWORD: as9891291333
+    ports:
+      - "6363:6363"
+    networks:
+      - app_network
+
+volumes:
+  mysql_data:
+
+networks:
+  app_network:
+    driver: bridge

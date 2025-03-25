@@ -1,0 +1,41 @@
+{
+  "name": "transfer-platform",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nodemon src/app.ts",
+    "build": "tsc",
+    "start": "cross-env NODE_ENV=production node dist/app.js",
+    "test": "jest",
+    "rebuild": "docker compose down && docker ps && docker compose up -d --build && docker restart transfer_app && docker logs -f transfer_app",
+    "redis_login": "docker exec -it redis_cache redis-cli",
+    "mysql_login": "docker exec -it mysql_db mysql -u root -p"
+  },
+  "keywords": [],
+  "author": "Ashish Vashisht",
+  "license": "MIT",
+  "description": "",
+  "devDependencies": {
+    "@types/amqplib": "^0.10.7",
+    "@types/express": "^5.0.1",
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.13.11",
+    "@types/supertest": "^6.0.3",
+    "cross-env": "^7.0.3",
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.9",
+    "supertest": "^7.1.0",
+    "ts-jest": "^29.3.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.2"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "ethers": "^6.13.5",
+    "express": "^4.21.2",
+    "mysql2": "^3.14.0",
+    "redis": "^4.7.0",
+    "uuid": "^11.1.0",
+    "winston": "^3.17.0"
+  }
+}

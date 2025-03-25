@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "commonjs",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "./dist", // or wherever you want compiled code
+    "rootDir": "./", // Include the root directory as well
+    "baseUrl": "./",
+    "paths": {
+      "*": ["node_modules/*"]
+    }
+  },
+  "include": [
+    "src/**/*", // include everything in src
+    "tests/**/*" // include the tests folder
+  ],
+  "exclude": [
+    "node_modules",
+    "dist" // exclude dist folder if compiled files are there
+  ]
+}

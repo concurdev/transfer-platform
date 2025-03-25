@@ -1,0 +1,6 @@
+node_modules
+check_transfer_lock.sh
+msg.js
+msg.txt
+coverage
+logs
